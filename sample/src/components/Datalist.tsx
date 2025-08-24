@@ -22,7 +22,7 @@ const DataList: React.FC = () => {
 
     return (
         <div>
-            <h2>選手一覧（APIから取得）</h2>
+            <h2>商品一覧（APIから取得）</h2>
         <ul>
         {data.map((d) => (
             <li key={d.id}>

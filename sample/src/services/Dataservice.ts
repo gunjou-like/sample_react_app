@@ -4,10 +4,11 @@
 import { Data } from "../types/Data";
 
 export const fetchData = async (count: number): Promise<Data[]> => {
-    const response = await fetch(`http://localhost:5000/api/players?count=${count}`);
+    const response = await fetch(`http://localhost:5000/api/data?count=${count}`);
     if (!response.ok) {
         throw new Error("データの取得に失敗しました");
     }
     const data = await response.json();
+    console.log(data)
     return data;
 };
